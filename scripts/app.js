@@ -37,12 +37,43 @@ function generateTable(data) {
 		typeProductParent.appendChild(typeProductLabel);
 
 
+		let ran = false;
+
+
 		for (let e = 0; e < typeProduct.length; e++) {
 			let item = typeProduct[e];
 
 			let itemDiv = document.createElement('div');
-			itemDiv.innerHTML = item.name + '  ' + item.price + '  ' + item.quantity;
+			itemDiv.style.display = 'flex';
 
+
+			let typeProductHeader = document.createElement('div');
+			typeProductHeader.style.display = 'flex';
+
+			if(!ran) {
+				for (let l in item) {
+					let itemLabel = document.createElement('div');
+					itemLabel.style.width = '300px';
+
+					itemLabel.innerHTML = l;
+
+					typeProductHeader.appendChild(itemLabel)
+
+					ran = true;
+
+				}
+			}
+
+			for (let k in item) {
+				let itemProperty = document.createElement('div');
+				itemProperty.style.width = '300px';
+				itemProperty.innerHTML = item[k]
+
+				itemDiv.appendChild(itemProperty)
+
+			}
+
+			typeProductItems.appendChild(typeProductHeader);
 			typeProductItems.appendChild(itemDiv);
 
 		}
