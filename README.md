@@ -8,3 +8,5 @@ Enter the following in commandline (https://www.computerhope.com/issues/chusedos
 
 
 enter localhost:3000 in weed shop 3 browser
+
+follow me @ https://www.twitch.tv/topeveryday for sick drum and bass DJ
