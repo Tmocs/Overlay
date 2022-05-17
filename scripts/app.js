@@ -114,7 +114,6 @@ getData();
 let timeleft = 10;
 setInterval(function () {
 	if (timeleft <= 0) {
-		console.log("update");
 		timeleft = 10;
 		getData()
 	}
