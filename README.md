@@ -11,7 +11,7 @@ RUN .exe!
 
 Run http://localhost:3420/ AS THE WEBSITE in the GAME!
 
-## IF YOU CLONE
+## IF YOU CLONE ( PROGRAMMER NERDS ONLY, YOU ONLY NEED ABOVE IF YOU CASUAL <3 ) 
 1. Download and install recommended nodejs https://nodejs.org/en/
 2. MODIFY .env file SELLIFY_JSON_PATH TO user sellify.json location, see .env for example where to find it!
 
