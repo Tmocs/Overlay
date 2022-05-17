@@ -1,5 +1,7 @@
 # [READ FIRST] IMPORTANT !!! WEED SHOP 3 TOP MENU INSTALLATION GUIDE N SHIT
 
+### Video shit
+https://www.youtube.com/watch?v=VkPH3fq5eF8
 ## RELEASE DOWNLOAD
 
 Grab latest from https://github.com/seedpodsw/topweedshop3menu/releases/
