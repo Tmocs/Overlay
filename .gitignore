@@ -99,3 +99,7 @@ dist
 # TernJS port file
 .tern-port
 /.idea/
+
+#releases
+weedshop3data-win32-x64.zip
+weedshop3data-win32-x64
