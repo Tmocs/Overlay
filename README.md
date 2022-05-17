@@ -1,4 +1,4 @@
-# WeedShop
+# [READ FIRST] IMPORTANT !!! WEED SHOP 3 TOP MENU INSTALLATION GUIDE N SHIT
 
 1. Download and install recommended nodejs https://nodejs.org/en/
 2. MODIFY .env file SELLIFY_JSON_PATH TO user sellify.json location, see .env for example where to find it!
