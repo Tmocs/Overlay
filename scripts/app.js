@@ -57,7 +57,15 @@ function generateTable(data) {
 
 					itemLabel.innerHTML = l;
 
+
 					typeProductHeader.appendChild(itemLabel)
+
+					if(l === 'price'){
+						let itemLabel = document.createElement('div');
+						itemLabel.style.width = '300px';
+						itemLabel.innerHTML = 'profit';
+						typeProductHeader.appendChild(itemLabel);
+					}
 
 					ran = true;
 
@@ -68,8 +76,15 @@ function generateTable(data) {
 				let itemProperty = document.createElement('div');
 				itemProperty.style.width = '300px';
 				itemProperty.innerHTML = item[k]
-
 				itemDiv.appendChild(itemProperty)
+				if(k === 'price'){
+					let profitProperty = document.createElement('div');
+					profitProperty.innerHTML = item[k] * item['quantity'];
+					profitProperty.style.width = '300px';
+					itemDiv.appendChild(profitProperty);
+				}
+
+
 
 			}
 

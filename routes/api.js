@@ -10,6 +10,8 @@ function getConfig(filepath) {
 
 router.get('/json', function (req, res, next) {
 	let data = getConfig(process.env.SELLIFY_JSON_PATH);
+
+
 	res.send(data);
 });
 
