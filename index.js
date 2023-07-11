@@ -16,6 +16,12 @@ app.get('/', function (req, res) {
 	res.sendFile(path.join(__dirname, 'index.html'))
 });
 
+app.get('/credits', function (req, res) {
+	res.sendFile(path.join(__dirname, 'Credit.html'))
+});
+
+
+
 const server = app.listen(port, host, function () {
 	const host = server.address().address = '0.0.0.0' ? 'localhost' : server.address().address;
 	const port = server.address().port;

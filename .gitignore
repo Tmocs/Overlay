@@ -105,3 +105,4 @@ dist
 #releases
 weedshop3data-win32-x64.zip
 weedshop3data-win32-x64
+.env
