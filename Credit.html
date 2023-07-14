@@ -1,129 +1,126 @@
 <!DOCTYPE html>
-<meta charset="utf-8" />
 <html>
 <head>
-<style>
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300); 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-@font-face {
-    font-family: 'exo';
-    src: url('C:\Users\tmocs\Downloads\Exo-VariableFont_wght.ttf');
-}
-
-@font-face {
+  <meta charset="utf-8" />
+  <title>Credits</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @font-face {
+      font-family: 'exo';
+      src: url('C:\Users\tmocs\Downloads\Exo-VariableFont_wght.ttf');
+    }
+    @font-face {
   font-family: 'exo2';
-  src: url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+  src: url('https://fonts.gstatic.com/s/exo2/v12/7cHov4okm5zmbt5LKsLCvQ.ttf');
 }
 
-html, body {
-  height: 1000px;
-}
-
-body {
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-}
-
-
-.user-entry {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.profile-picture {
-    margin-bottom: 10px; /* Adjust this to add some space between the image and the username */
-}
-
-.name {
-    text-align: center;
-    max-width: 400px; /* Adjust this value as needed */
-    word-wrap: break-word;
-}
-
-
-.wrapper {
-    padding-top: 242px;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  font: 300 30px/1 'exo2', sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  padding-bottom: 500px;
-}
-}
-
-.movie {
-  margin-bottom: 100px;
-  font-size: 250;
-}
-p.name{font-size: 50px; font-family: monospace; text-shadow: 5px 5px black;}
-
-p.thank-you{margin-top: 100px; 200px; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; background-color: rgba(128, 128, 128, 0.705);text-shadow: 5px 5px black;}
-
-p.signature{font-size: 200px; font-family: 'exo2', sans-serif; text-shadow: 5px 5px black;
-padding: 200px 200px 200px 200px;}
-
-p.job{font-size: 40px; font-family: Arial, Helvetica, sans-serif; background-color: rgba(128, 128, 128, 0.705);text-shadow: 5px 5px black;}
-.job {
-    border-style: solid;
-    padding: 30px 0px 30px 0px; 
-  margin-top: 60px;
-  margin-bottom: 60px;
-  font-size: 52px;
-  font-weight: bold;
-  color: rgb(205, 205, 205);
-}
-
-
-</style>
-
-<!DOCTYPE html>
-<html>
-<head>
-  
+    html, body {
+      height: 100px;
+    }
+    body {
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+    }
+    .user-entry {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+      margin-bottom: 30px;
+    }
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      margin-left: 650px;
+      margin-right: 100px;
+      border-radius: 50%;
+      text-align: center;
+    }
+    p.name {
+      font-size: 60px;
+      font-family: monospace;
+      text-shadow: 5px 5px black;
+      text-align: left;
+    }
+    .wrapper {
+      padding-top: 242px;
+      position: fixed;
+      top: 100%;
+      width: 100%;
+      font: 400 300px 'exo2', sans-serif;
+      text-align: center;
+      text-transform: capitalize;
+      color: rgb(255, 255, 255);
+      padding-bottom: 500px;
+      padding-right: 100px;
+    }
+    p.job {
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgba(128, 128, 128, 0.705);
+      text-shadow: 5px 5px black;
+      text-align: center;
+    }
+    .job {
+      border-style: solid;
+      padding: 30px 0px 30px 0px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      font-size: 52px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+    }
+    p.thank-you {
+      margin-top: 100px;
+      200px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: rgba(128, 128, 128, 0.705);
+      text-shadow: 5px 5px black;
+      text-align: center;
+    }
+    p.signature {
+      font-size: 200px;
+      font-family: 'exo2', sans-serif;
+      text-shadow: 5px 5px black;
+      padding: 200px 200px 200px 200px;
+    }
+  </style>
   <script language="javascript" type="text/javascript">
-
     function getParameterCaseInsensitive(object, key) {
       return object[Object.keys(object)
         .find(k => k.toLowerCase() === key.toLowerCase())
       ];
     }
-    async function getTwitchUserByLogin(login) {
-    // Prepare the URL
-    const url = new URL('http://localhost:3420/api/twitch-users');
-    // The login parameter could be a string or an array of strings
-    if (Array.isArray(login)) {
-        login.forEach(l => url.searchParams.append('login', l));
-    } else {
-        url.searchParams.append('login', login);
-    }
     
-    // Send the request
-    const response = await fetch(url);
 
-    // Parse the JSON response
-    const data = await response.json();
+    async function getTwitchUserByLogin(login) {
+      // Prepare the URL
+      const url = new URL('http://localhost:3420/api/twitch-users');
+      // The login parameter could be a string or an array of strings
+      if (Array.isArray(login)) {
+        login.forEach(l => url.searchParams.append('login', l));
+      } else {
+        url.searchParams.append('login', login);
+      }
 
-    // Handle errors
-    if (!response.ok) {
+      // Send the request
+      const response = await fetch(url);
+
+      // Parse the JSON response
+      const data = await response.json();
+
+      // Handle errors
+      if (!response.ok) {
         throw new Error(`An error has occurred: ${response.status}`);
+      }
+
+      return data;
     }
-
-    return data;
-}
-
-// Usage: 
-// getTwitchUserById('1234').then(data => console.log(data)).catch(err => console.error(err));
-// or
-// getTwitchUserById(['1234', '5678']).then(data => console.log(data)).catch(err => console.error(err));
 
     // Create WebSocket connection.
     const socket = new WebSocket('ws://localhost:8080');
@@ -134,30 +131,28 @@ p.job{font-size: 40px; font-family: Arial, Helvetica, sans-serif; background-col
       console.log('Message from server: ', msg);
 
       if (msg.id === 'credits') {
-        const subscribers = await getTwitchUserByLogin(msg.users.subscribers)
+        const subscribers = await getTwitchUserByLogin(msg.users.subscribers);
         console.log(subscribers);
         const subscriberDataMap = subscribers.data.reduce((acc, curr) => {
-          console.log(acc,curr)
-    acc[curr.login] = curr;
-    return acc;
-}, {});
+          console.log(acc, curr);
+          acc[curr.login] = curr;
+          return acc;
+        }, {});
 
         // close the socket
         socket.close();
 
-
-
         const headers = [
           { section: "users", key: "moderators", title: "TMODS", filterExistingEntries: true },
           { section: "users", key: "vips", title: "VIPs", filterExistingEntries: true },
-          { section: "events", key: "reSubs", title: "Resubs" },
-          { section: "events", key: "subs", title: "New Subs" },
-          { section: "events", key: "follows", title: "New Followers" },
-          { section: "events", key: "cheers", title: "Bits" },
-          { section: "events", key: "giftSubs", title: "Legendary Gift Subbers" },
-          { section: "events", key: "giftBombs", title: "Legendary Gift Bombers" },
-          { section: "events", key: "raided", title: "Thank you Raiders" },
-          { section: "events", key: "rewardRedemptions", title: "Decided to waste channel points" },
+          { section: "events", key: "reSubs", title: "Resubs", filterExistingEntries: true },
+          { section: "events", key: "subs", title: "New Subs", filterExistingEntries: true },
+          { section: "events", key: "follows", title: "New Followers", filterExistingEntries: true },
+          { section: "events", key: "cheers", title: "Bits", filterExistingEntries: true },
+          { section: "events", key: "giftSubs", title: "Legendary Gift Subbers", filterExistingEntries: true },
+          { section: "events", key: "giftBombs", title: "Legendary Gift Bombers", filterExistingEntries: true },
+          { section: "events", key: "raided", title: "Thank you Raiders", filterExistingEntries: true },
+          { section: "events", key: "rewardRedemptions", title: "Decided to waste channel points", filterExistingEntries: true  },
           { section: "events", key: "pyramids", title: "Managed to make some pyramids" },
           { section: "users", key: "editors", title: "Editors" },
           { section: "groups", key: "<group name>", title: "<group title>" },
@@ -184,22 +179,22 @@ p.job{font-size: 40px; font-family: Arial, Helvetica, sans-serif; background-col
             if (header.filterExistingEntries) eventData = eventData.filter(e => !existingUserMap[header.section] || !existingUserMap[header.section].includes(e));
             if (eventData.length > 0) {
               elements.push(`<p class="job">${header.title}</p>`);
-            for (const username of eventData) {
+              for (const username of eventData) {
                 if (subscriberDataMap[username]) {
-                    const data = subscriberDataMap[username];
-                    elements.push(`
-    <div class="user-entry">
-        <img src="${data.profile_image_url}" alt="Profile Picture" class="profile-picture">
-        <p class="name">${username}</p>
-    </div>
-`);
+                  const data = subscriberDataMap[username];
+                  elements.push(`
+                    <div class="user-entry">
+                      <img src="${data.profile_image_url}" alt="Profile Picture" class="profile-picture">
+                      <p class="name">${username}</p>
+                    </div>
+                  `);
 
-                    // save output users by section
-                    if (!existingUserMap[header.section]) existingUserMap[header.section] = [];
-                    existingUserMap[header.section].push(username);
+                  // save output users by section
+                  if (!existingUserMap[header.section]) existingUserMap[header.section] = [];
+                  existingUserMap[header.section].push(username);
                 }
+              }
             }
-        }
           }
         }
         container.innerHTML = elements.join('');
@@ -207,30 +202,26 @@ p.job{font-size: 40px; font-family: Arial, Helvetica, sans-serif; background-col
         // Init animation
         const creditsHeight = Math.ceil((container.offsetHeight / window.innerHeight) * -100) - 10;
         const duration = ((container.offsetHeight / window.innerHeight * 100) + 100) * 69;
-        const creditsAnimation = container.animate([
-          { top: '110%' },
-          { top: creditsHeight + '%' }
-        ], {
-          duration: duration,
-          iterations: Infinity
-        });
+        const creditsAnimation = container.animate(
+          [
+            { top: '110%' },
+            { top: `${creditsHeight}%` }
+          ],
+          {
+            duration: duration,
+            iterations: Infinity
+          }
+        );
 
         const thankYouMessage = document.createElement('p');
-thankYouMessage.innerText = 'THANK YOU FOR YOUR SUPPORT';
-thankYouMessage.classList.add('thank-you');
-thankYouMessage.style.fontSize = '80px'; // Increase font size to 80 pixels
-thankYouMessage.style.fontFamily = 'Arial, Helvetica, sans-serif'; // Use Arial, Helvetica, sans-serif font
-thankYouMessage.style.marginTop = '500px'; // Add 500 pixels of margin to the top
-thankYouMessage.style.marginBottom = '2000px'; 
-thankYouMessage.style.border = '10px solid white'; 
-container.appendChild(thankYouMessage);
-
-
-
-
-
-
-
+        thankYouMessage.innerText = 'THANK YOU FOR YOUR SUPPORT';
+        thankYouMessage.classList.add('thank-you');
+        thankYouMessage.style.fontSize = '80px';
+        thankYouMessage.style.fontFamily = 'Arial, Helvetica, sans-serif';
+        thankYouMessage.style.textAlign = 'center'; // Align the thank you message from the center
+        thankYouMessage.style.marginTop = '500px';
+        thankYouMessage.style.border = '10px solid white';
+        container.appendChild(thankYouMessage);
       }
     }
 
@@ -248,10 +239,3 @@ container.appendChild(thankYouMessage);
   <div id="credits" class="wrapper"></div>
 </body>
 </html>
-
-<script>
-  setTimeout(function () {
-    // Your script code goes here
-  }, 10000); // Delay in milliseconds (10 seconds)
-</script>
-

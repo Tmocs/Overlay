@@ -43,7 +43,7 @@ router.get('/twitch-users', async function (req, res, next) {
     if (!response.ok) {
         const message = `An error has occured: ${response.status}`;
         return next(new Error(message));
-    }
+    };
 
     // Get the Twitch API response data
     const twitchData = await response.json();
